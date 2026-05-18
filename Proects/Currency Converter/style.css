@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #f8e6b6 0%, #fdc3ab 40%, #7b83f0 100%);
+  color: #1f2a44;
+  line-height: 1.4;
+}
+
+.container {
+  background: linear-gradient(145deg, #ffffffcc 0%, #f1f4ffcc 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  min-width: 320px;
+  width: min(96vw, 450px);
+  box-shadow: 0 20px 36px rgba(19, 23, 58, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1e2a52;
+  font-size: 1.8rem;
+}
+
+form {
+  margin: 1.2rem 0 0 0;
+}
+
+.amount p,
+.from p,
+.to p {
+  font-size: 0.93rem;
+  margin-bottom: 0.3rem;
+  color: #5e6e92;
+}
+
+form,
+select,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+  font-family: inherit;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+.exchange-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  min-width: 2.4rem;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #cdd6eb;
+  color: #4d5f88;
+  box-shadow: 0 2px 10px rgba(46, 62, 110, 0.1);
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exchange-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(46, 62, 110, 0.18);
+}
+
+.exchange-btn:active {
+  transform: translateY(0);
+}
+
+form input {
+  border: 1px solid #cdd6eb;
+  font-size: 1rem;
+  height: 3rem;
+  padding-left: 0.75rem;
+  background: #fff;
+  color: #1e2b51;
+}
+
+form input:focus {
+  border-color: #7c8fe8;
+  box-shadow: 0 0 0 2px rgba(125, 143, 215, 0.2);
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.dropdown > .from,
+.dropdown > .to {
+  flex: 1;
+}
+
+.dropdown i {
+  font-size: 1.5rem;
+  color: #6576a6;
+  transform: rotate(90deg);
+  margin-top: 0.5rem;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 0.6rem;
+  border: 1px solid #cdd6eb;
+  background: #fff;
+  padding: 0.35rem 0.55rem;
+}
+
+.select-container:hover {
+  border-color: #97a6e5;
+}
+
+.select-container img {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 0.3rem;
+  object-fit: cover;
+}
+
+.select-container select {
+  border: none;
+  width: 100%;
+  background: transparent;
+  font-size: 1rem;
+  color: #27335c;
+  appearance: none;
+}
+
+.msg {
+  margin: 1.7rem 0 1.2rem 0;
+  font-weight: 600;
+  color: #30405e;
+  background: #eef2ff;
+  border: 1px solid #d3ddff;
+  border-radius: 0.7rem;
+  padding: 0.7rem 0.9rem;
+}
+
+form button {
+  height: 3.2rem;
+  background: linear-gradient(145deg, #7d6bdb 0%, #ca5aa9 100%);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(104, 72, 168, 0.24);
+  filter: brightness(1.05);
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100vw - 1rem);
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dropdown i {
+    transform: rotate(0deg);
+    margin: 0;
+  }
+}
